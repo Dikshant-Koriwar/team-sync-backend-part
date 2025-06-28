@@ -37,16 +37,16 @@ app.use(
     sameSite: "lax",
   })
 );
-
-app.use(passport.initialize());
-app.use(passport.session());
-
 app.use(
   cors({
     origin: config.FRONTEND_ORIGIN,
     credentials: true,
   })
 );
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 app.get(
   `/`,
